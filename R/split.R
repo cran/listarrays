@@ -92,7 +92,7 @@ split_on_dim <- function(X, which_dim,
   else if (is.numeric(f) && all(f < 1)) {
     stopifnot(sum(f) == 1)
     f <- cut(id, c(0, cumsum(f) * length(id)),
-          labels = paste0("grp", seq_along(f)))
+          labels = names(f) %||% paste0("grp", seq_along(f)))
   }
 
   if (!identical(length(id), length(f)))
@@ -103,14 +103,12 @@ split_on_dim <- function(X, which_dim,
   extract_expr <- extract_dim_chr_expr(X, which_dim, idx_var_nm = "l[[i]]", drop = drop)
 
   args <-  as.pairlist(alist(X = , l = ))
-  body <-  parse1(
-    "{
+  body <-  parse1(sprintf("{
       out <- vector('list', length(l))
       for (i in seq_along(l))
-        out[[i]] <- ",extract_expr,"
+        out[[i]] <- %s
       out
-    }"
-  )
+    }", extract_expr))
 
   split_it <- eval(call("function", args, body))
 
@@ -168,13 +166,12 @@ split_along_dim <- function(X, which_dim, drop = NULL, depth = Inf) {
   length_out <-  DIM(X)[[which_dim]]
 
   args <-  as.pairlist(alist(X = , length_out = ))
-  body <- parse1("{
+  body <- parse1(sprintf("{
       out <- vector('list', length_out)
       for (i in seq_len(length_out))
-        out[[i]] <- ", extract,"
+        out[[i]] <- %s
       out
-   }"
-  )
+   }", extract))
 
   split_it <- eval(call("function", args, body))
 
@@ -182,10 +179,7 @@ split_along_dim <- function(X, which_dim, drop = NULL, depth = Inf) {
     split_it <- cmpfun(split_it)
 
   out <- split_it(X, length_out)
-
-  if (!is.null(nms <- dimnames(X)[[which_dim]]))
-    names(out) <- nms
-
+  names(out) <- dimnames(X)[[which_dim]]
   out
 }
 
