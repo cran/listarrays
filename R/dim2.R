@@ -1,4 +1,3 @@
-
 #' Make or reshape an array with C-style (row-major) semantics
 #'
 #' These functions reshape or make an array using C-style, row-major semantics.
@@ -112,4 +111,4 @@ array_reshape <- function(x, dim, order = c("C", "F")) {
 #' for (i in 1:3)
 #'   for(j in 1:3)
 #'     stopifnot(x[,j,i] == tx[i,j,])
-t.array <- function(x) aperm(x, length(dim(x)):1)
+t.array <- function(x) aperm(x)
