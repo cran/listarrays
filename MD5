@@ -1,8 +1,9 @@
-fba8a82d419424a5b7c80485f53bcfc4 *DESCRIPTION
-99be5e9951b8cd24e0d25682e194e372 *NAMESPACE
+67fc15116d21f7d443b1e2f073b99c13 *DESCRIPTION
+cfe1c9592fbb375a60db2f245a474560 *NAMESPACE
+dd1760ffdd349dbf2d012ef91e086b38 *NEWS.md
 f8711895cb2d13055be4a54d7dcd7b9e *R/bind.R
 b6865e9050187c585fd917580c39b6eb *R/dim.R
-5859a3484b78abfc798dc240e00ae514 *R/dim2.R
+545c554bfbd0861b3a218734a4230d8e *R/dim2.R
 2b43462983dcdb403b76aaa13e620f17 *R/dimnames.R
 5812e3ec2a809924209cbfbd0d11202c *R/extract.R
 b21b89095ba6cc2b21564c286556e47c *R/map.R
@@ -11,11 +12,11 @@ db65b60885ea881d1fd9ca0d19519b92 *R/onehot.R
 de127d1c27bb362945391c3b2e175bac *R/reshape.R
 cea4e203848cb8bf8665044dee17bf96 *R/seq_along.R
 f1770ecefccbfbe6d477dfe0f5eb446f *R/shuffle.R
-30839f146977c1d0814396944b49fb97 *R/split.R
+16ad7df56746f01be82f6f5050b62fbd *R/split.R
 82f88ee0a2427309e1b623a1dae8f7e2 *R/standardize.R
 f8b94ccf80d3f4604c9fbff5b8d61d9c *R/utils.R
 606134176160124095000cf8737d7e8f *R/zzz.R
-8105f414443e4f8e6c271bf9ce799453 *README.md
+78f253fe223db5c046f2dd06b59de7af *README.md
 759e3a2be2ed9fae465e366fde05d797 *man/DIM.Rd
 a46aa7eed46c7f76541712879049b906 *man/array2.Rd
 6d74c2fe9a9b453a369e9e7afb7f0a05 *man/bind-arrays.Rd
@@ -32,7 +33,6 @@ e4eb0ff2f222d7d9da19f59b218a40bd *man/onehot.Rd
 1479eccba6e66036145c700878ff0ac5 *man/set_dimnames.Rd
 3766950ff08cd5b1abcbb571944633ef *man/shuffle_rows.Rd
 4e0f15a7a2e0905a6de72c9c8180d65a *man/split-array.Rd
-c868345dfb4227e84e5b48a399a9f699 *man/t.array.Rd
 44fad72243a8b5458ebc165b37ee30ff *tests/testthat.R
 a3274b8669630fa717d816005141227c *tests/testthat/test-bind.R
 673a1b1248b0a310d51367adea69ac6e *tests/testthat/test-dimnames.R
@@ -40,4 +40,4 @@ a3274b8669630fa717d816005141227c *tests/testthat/test-bind.R
 a66703be116cd7d72b474b51dc229c3c *tests/testthat/test-modify.R
 de25e465aa663b9caae979b0af628c88 *tests/testthat/test-onehot.R
 3b3db5a6593c4c581748f253bf01b327 *tests/testthat/test-shuffle.R
-4c15a4a9a6db7c768f93d5136dda2f00 *tests/testthat/test-split.R
+186466aa4eff469600031208af1b0d8b *tests/testthat/test-split.R
